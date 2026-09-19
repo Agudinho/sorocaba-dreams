@@ -118,3 +118,26 @@ const setupStoreInfo = () => {
 };
 
 setupStoreInfo();
+
+const setupStoreSeo = () => {
+    const title = document.querySelector(
+        "[data-store-title]"
+    );
+
+    const description = document.querySelector(
+        "[data-store-description]"
+    );
+
+    if (title) {
+        title.textContent = storeConfig.site.title;
+    }
+
+    if (description) {
+        description.setAttribute(
+            "content",
+            storeConfig.site.description
+        );
+    }
+};
+
+setupStoreSeo();
