@@ -87,3 +87,34 @@ const setupStoreLinks = () => {
 };
 
 setupStoreLinks();
+
+const setupStoreInfo = () => {
+    const storeNames = document.querySelectorAll(
+        "[data-store-name]"
+    );
+
+    const storeNameSecondaries = document.querySelectorAll(
+        "[data-store-name-secondary]"
+    );
+
+    const storeLocations = document.querySelectorAll(
+        "[data-store-location]"
+    );
+
+    const [firstName, secondName = ""] =
+        storeConfig.name.split(" ");
+
+    storeNames.forEach((element) => {
+        element.textContent = firstName;
+    });
+
+    storeNameSecondaries.forEach((element) => {
+        element.textContent = secondName;
+    });
+
+    storeLocations.forEach((element) => {
+        element.textContent = storeConfig.location;
+    });
+};
+
+setupStoreInfo();
