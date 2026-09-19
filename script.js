@@ -61,3 +61,29 @@
         }
     });
 })();
+const setupStoreLinks = () => {
+    const whatsappLinks = document.querySelectorAll(
+        '[data-store-link="whatsapp"]'
+    );
+
+    const instagramLinks = document.querySelectorAll(
+        '[data-store-link="instagram"]'
+    );
+
+    const whatsappUrl =
+        `https://wa.me/${storeConfig.whatsapp.number}` +
+        `?text=${encodeURIComponent(storeConfig.whatsapp.defaultMessage)}`;
+
+    whatsappLinks.forEach((link) => {
+        link.setAttribute("href", whatsappUrl);
+    });
+
+    instagramLinks.forEach((link) => {
+        link.setAttribute(
+            "href",
+            storeConfig.instagram.url
+        );
+    });
+};
+
+setupStoreLinks();
