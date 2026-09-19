@@ -358,6 +358,19 @@ button {
     .about-card {
     width: min(290px, 78%);
     }
+
+    .instagram-section {
+    padding: 80px 0;
+    }
+
+    .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    }
+
+    .instagram-card {
+    min-height: 220px;
+    }
 }
 
 .hero {
@@ -965,4 +978,128 @@ h1 em {
 
 .about-copy .button {
     margin-top: 28px;
+}
+
+.instagram-section {
+    padding: 120px 0;
+    background: #ffffff;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: clamp(50px, 8vw, 100px);
+}
+
+.instagram-copy {
+    max-width: 620px;
+}
+
+.instagram-copy h2 {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 0.98;
+}
+
+.instagram-copy > p:not(.eyebrow) {
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+.instagram-copy .button {
+    margin-top: 28px;
+}
+
+.instagram-card {
+    min-height: 280px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 28px;
+
+    border: 1px solid var(--line);
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #faf1f7
+        );
+
+    box-shadow:
+        0 18px 45px rgba(70, 47, 64, 0.07);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--rose-200);
+
+    box-shadow:
+        0 24px 55px rgba(70, 47, 64, 0.1);
+}
+
+.instagram-card-icon {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: var(--rose-100);
+
+    color: var(--rose-700);
+
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.instagram-card > div:nth-child(2) {
+    display: grid;
+    gap: 5px;
+}
+
+.instagram-label {
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.instagram-card strong {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    color: var(--ink);
+}
+
+.instagram-arrow {
+    margin-left: auto;
+
+    color: var(--rose-500);
+
+    font-size: 20px;
 }
